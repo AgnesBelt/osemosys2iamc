@@ -1,36 +1,152 @@
 model: GLUCOSE
 scenario: Baseline
 results:
+# - iamc_variable: "Primary Energy|Biomass"
+#   technology:
+#     - name: C1BMCHP00
+#       unit: EJ/y
+#     - name: C1BMIGPCS
+#       unit: EJ/y
+#     - name: C1BMSCP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Coal"
+#   technology:
+#     - name: C1COCHP00
+#       unit: EJ/y
+#     - name: C1COIGP00
+#       unit: EJ/y
+#     - name: C1COSCP00
+#       unit: EJ/y
+#     - name: C1COSCPCS
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Gas"
+#   technology:
+#     - name: C1NGCCP00
+#       unit: EJ/y
+#     - name: C1NGCCPCH
+#       unit: EJ/y
+#     - name: C1NGCCPCS
+#       unit: EJ/y
+#     - name: C1NGGCP00
+#       unit: EJ/y
+#     - name: C1NGGCPCH
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Geothermal"
+#   technology:
+#     - name: C1GOCVP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Hydro"
+#   technology:
+#     - name: C1HYDMP00
+#       unit: EJ/y
+#     - name: C1HYMIP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Nuclear"
+#   technology:
+#     - name: C1NULWP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Ocean"
+#   technology:
+#     - name: C1OCCVP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Oil"
+#   technology:
+#     - name: C1OIRFP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Solar"
+#   technology:
+#     - name: C1SOC1P00
+#       unit: EJ/y
+#     - name: C1SOV1P00
+#       unit: EJ/y
+#     - name: C1SOV2P00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
+# - iamc_variable: "Primary Energy|Wind"
+#   technology:
+#     - name: C1WDONP00
+#       unit: EJ/y
+#     - name: C1WDOFP00
+#       unit: EJ/y
+#   osemosys_param: TotalTechnologyAnnualActivity
 - iamc_variable: "Primary Energy|Biomass"
   technology:
+    - name: C1BMBRFH1
+      unit: EJ/y
+    - name: C1BMBRFN1
+      unit: EJ/y
     - name: C1BMCHP00
+      unit: EJ/y
+    - name: C1BMHTF03
       unit: EJ/y
     - name: C1BMIGPCS
       unit: EJ/y
+    - name: C1BMLP000
+      unit: EJ/y
     - name: C1BMSCP00
       unit: EJ/y
-  osemosys_param: TotalTechnologyAnnualActivity
+  osemosys_param: UseByTechnology
 - iamc_variable: "Primary Energy|Coal"
   technology:
-    - name: C1COCHP00
+    - name: C1CO00I00
       unit: EJ/y
-    - name: C1COIGP00
-      unit: EJ/y
-    - name: C1COSCP00
-      unit: EJ/y
-    - name: C1COSCPCS
-      unit: EJ/y
-  osemosys_param: TotalTechnologyAnnualActivity
+  osemosys_param: ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Gas"
   technology:
-    - name: C1NGCCP00
+    - name: C1NG00I00
       unit: EJ/y
-    - name: C1NGCCPCH
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Geothermal"
+  technology:
+    - name: C1GOCVP00
       unit: EJ/y
-    - name: C1NGCCPCS
+    - name: C1GOHTF03
       unit: EJ/y
-    - name: C1NGGCP00
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Hydro"
+  technology:
+    - name: C1HYDMP00
       unit: EJ/y
-    - name: C1NGGCPCH
+    - name: C1HYMIP00
       unit: EJ/y
-  osemosys_param: TotalTechnologyAnnualActivity
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Nuclear"
+  technology:
+    - name: C1NU00I00
+      unit: EJ/y
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Ocean"
+  technology:
+    - name: C1OCCVP00
+      unit: EJ/y
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Oil"
+  technology:
+    - name: C1OI00I00
+      unit: EJ/y
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Solar"
+  technology:
+    - name: C1SOC1P00
+      unit: EJ/y
+    - name: C1SOV1P00
+      unit: EJ/y
+    - name: C1SOV2P00
+      unit: EJ/y
+  osemosys_param: ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Wind"
+  technology:
+    - name: C1WDONP00
+      unit: EJ/y
+    - name: C1WDOFP00
+      unit: EJ/y
+  osemosys_param: ProductionByTechnologyAnnual
+
