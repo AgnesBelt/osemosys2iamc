@@ -20,6 +20,13 @@ def filter_fuel(df: pd.DataFrame, technologies: List, fuels: List) -> pd.DataFra
 
     return df[mask & fuel_mask]
 
+def filter_emission(df: pd.DataFrame, technologies: List, emissions: List) -> pd.DataFrame:
+
+    mask = df.TECHNOLOGY.isin(technologies)
+    emission_mask = df.EMISSION.isin(emissions)
+
+    return df[mask & emission_mask]
+
 def extract_results(df: pd.DataFrame, technologies: List) -> pd.DataFrame:
 
     mask = df.TECHNOLOGY.isin(technologies)
@@ -120,6 +127,9 @@ if __name__ == "__main__":
         if 'fuel' in result.keys():
             fuels = result['fuel']
             data = filter_fuel(results, technologies, fuels)
+        if 'emission' in result.keys():
+            emissions = result['emission']
+            data = filter_emission(results, technologies, emissions)
         else:
             data = extract_results(results, technologies)
         aggregated = aggregate_results(data)
