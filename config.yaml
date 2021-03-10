@@ -77,6 +77,8 @@ results:
 #     - name: C1WDOFP00
 #       unit: EJ/y
 #   osemosys_param: TotalTechnologyAnnualActivity
+
+# Primary Energy
 - iamc_variable: "Primary Energy|Biomass"
   technology:
     - name: C1BMBRFH1
@@ -93,46 +95,46 @@ results:
       unit: EJ/y
     - name: C1BMSCP00
       unit: EJ/y
-  osemosys_param: UseByTechnology
+  osemosys_param: Baseline_results/UseByTechnology
 - iamc_variable: "Primary Energy|Coal"
   technology:
     - name: C1CO00I00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Gas"
   technology:
     - name: C1NG00I00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Geothermal"
   technology:
     - name: C1GOCVP00
       unit: EJ/y
     - name: C1GOHTF03
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Hydro"
   technology:
     - name: C1HYDMP00
       unit: EJ/y
     - name: C1HYMIP00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Nuclear"
   technology:
     - name: C1NU00I00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Ocean"
   technology:
     - name: C1OCCVP00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Oil"
   technology:
     - name: C1OI00I00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Solar"
   technology:
     - name: C1SOC1P00
@@ -141,12 +143,623 @@ results:
       unit: EJ/y
     - name: C1SOV2P00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 - iamc_variable: "Primary Energy|Wind"
   technology:
     - name: C1WDONP00
       unit: EJ/y
     - name: C1WDOFP00
       unit: EJ/y
-  osemosys_param: ProductionByTechnologyAnnual
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
 
+
+# Capacity|Electricity
+- iamc_variable: "Capacity|Electricity|Coal, w/o CCS"
+  technology:
+    - name: C1COCHP00
+      unit: TW/y
+    - name: C1COIGP00
+      unit: TW/y
+    - name: C1COSCP00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Coal, w/ CCS"
+  technology:
+    - name: C1COSCPCS
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Solar|PV"
+  technology:
+    - name: C1SOV1P00
+      unit: TW/y
+    - name: C1SOV2P00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Solar|CSP"
+  technology:
+    - name: C1SOC1P00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind"
+  technology:
+    - name: C1WDONP00
+      unit: TW/y
+    - name: C1WDOFP00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind|Offshore"
+  technology:
+    - name: C1WDOFP00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind|Onshore"
+  technology:
+    - name: C1WDONP00
+      unit: TW/y
+  osemosys_param: Baseline_results/TotalCapacityAnnual
+
+
+# Secondary Energy
+- iamc_variable: "Secondary Energy|Electricity|Coal, w/o CCS"
+  technology:
+    - name: C1COCHP00
+      unit: EJ/y
+    - name: C1COIGP00
+      unit: EJ/y
+    - name: C1COSCP00
+      unit: EJ/y
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Electricity|Coal, w/ CCS"
+  technology:
+    - name: C1COSCPCS
+      unit: EJ/y
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Liquids|Coal"
+  technology:
+    - name: C1COLP000
+      unit: EJ/y
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Gases|Coal"
+  technology:
+    - name: C1COSF000
+      unit: EJ/y
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Solids|Coal"
+  technology:
+    - name: C1COHTF03
+      unit: EJ/y
+  osemosys_param: Baseline_results/UseByTechnology
+
+
+# Final Energy
+- iamc_variable: "Final Energy|Solids|Coal"
+  technology:
+    - name: C1COBRFH1
+      unit: EJ/y
+    - name: ALUPLANT
+      unit: EJ/y
+    - name: CEMPLANT
+      unit: EJ/y
+    - name: FERTPLANT
+      unit: EJ/y
+    - name: PAPPLANT
+      unit: EJ/y
+    - name: PETAPLANT
+      unit: EJ/y
+    - name: PETBPLANT
+      unit: EJ/y
+    - name: STEPLANT
+      unit: EJ/y
+    - name: LA1_i_PROD
+      unit: EJ/y
+    - name: LA1_PROD
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Baseline_results/UseByTechnology 
+- iamc_variable: "Final Energy|Industry|Solids|Coal"
+  technology:
+    - name: ALUPLANT
+      unit: EJ/y
+    - name: CEMPLANT
+      unit: EJ/y
+    - name: FERTPLANT
+      unit: EJ/y
+    - name: PAPPLANT
+      unit: EJ/y
+    - name: PETAPLANT
+      unit: EJ/y
+    - name: PETBPLANT
+      unit: EJ/y
+    - name: STEPLANT
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Baseline_results/UseByTechnology  
+- iamc_variable: "Final Energy|Residential and Commercial|Solids|Coal"
+  technology:
+    - name: C1COBRFH1
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual  
+- iamc_variable: "Final Energy|Other Sector|Solids|Coal"
+  technology:
+    - name: LA1_i_PROD
+      unit: EJ/y
+    - name: LA1_PROD
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Baseline_results/ProductionByTechnologyAnnual
+
+
+# Emissions
+# Not available in GLUCOSE:
+#   Emissions|CO2|Energy|Demand 
+#     Emissions|CO2|Energy|Demand|Industry 
+#     Emissions|CO2|Energy|Demand|Residential and Commercial 
+#     Emissions|CO2|Energy|Demand|Transportation 
+#     Emissions|CO2|Energy|Demand|Agriculture 
+#     Emissions|CO2|Energy|Demand|Other Sector 
+- iamc_variable: "Emissions|CO2|Energy and Industrial Processes"
+  technology:
+    - name: ALUPLANT
+      unit: GtCO2eq/y
+    - name: CEMPLANT
+      unit: GtCO2eq/y
+    - name: FERTPLANT
+      unit: GtCO2eq/y
+    - name: PAPPLANT
+      unit: GtCO2eq/y
+    - name: PETAPLANT
+      unit: GtCO2eq/y
+    - name: PETBPLANT
+      unit: GtCO2eq/y
+    - name: STEPLANT
+      unit: GtCO2eq/y
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1CO00I00
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NG00I00
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+    - name: C1OI00I00
+      unit: GtCO2eq/y
+    - name: C1BMLP000
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|Energy|Supply"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1CO00I00
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NG00I00
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+    - name: C1OI00I00
+      unit: GtCO2eq/y
+    - name: C1BMLP000
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+# - iamc_variable: "Emissions|CO2|Energy|Supply|Electricity"
+#   technology:
+#     - name:
+#       unit: GtCO2eq/y
+#     - name:
+#       unit: GtCO2eq/y
+#   osemosys_param: Baseline_results/AnnualTechnologyEmission
+# - iamc_variable: "Emissions|CO2|Energy|Supply|Other Sector"
+#   technology:
+#     - name:
+#       unit: GtCO2eq/y
+#     - name:
+#       unit: GtCO2eq/y
+#   osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|Industrial Processes"
+  technology:
+    - name: ALUPLANT
+      unit: GtCO2eq/y
+    - name: CEMPLANT
+      unit: GtCO2eq/y
+    - name: FERTPLANT
+      unit: GtCO2eq/y
+    - name: PAPPLANT
+      unit: GtCO2eq/y
+    - name: PETAPLANT
+      unit: GtCO2eq/y
+    - name: PETBPLANT
+      unit: GtCO2eq/y
+    - name: STEPLANT
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|AFOLU"
+  technology:
+    - name: LA1_i_PROD
+      unit: GtCO2eq/y
+    - name: LA1_PROD
+      unit: GtCO2eq/y
+    - name: LA2_PROD
+      unit: GtCO2eq/y
+    - name: LF1
+      unit: GtCO2eq/y
+    - name: LF2_PROD
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+
+# Carbon Sequestration
+- iamc_variable: "Carbon Sequestration|CCS"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|CCS|Biomass"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|CCS|Fossil"
+  technology:
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|Direct Air Capture"
+  technology:
+    - name: LF1
+      unit: GtCO2eq/y
+  osemosys_param: Baseline_results/AnnualTechnologyEmission
+
+
+
+scenario: Total
+results:
+# Primary Energy
+- iamc_variable: "Primary Energy|Biomass"
+  technology:
+    - name: C1BMBRFH1
+      unit: EJ/y
+    - name: C1BMBRFN1
+      unit: EJ/y
+    - name: C1BMCHP00
+      unit: EJ/y
+    - name: C1BMHTF03
+      unit: EJ/y
+    - name: C1BMIGPCS
+      unit: EJ/y
+    - name: C1BMLP000
+      unit: EJ/y
+    - name: C1BMSCP00
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+- iamc_variable: "Primary Energy|Coal"
+  technology:
+    - name: C1CO00I00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Gas"
+  technology:
+    - name: C1NG00I00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Geothermal"
+  technology:
+    - name: C1GOCVP00
+      unit: EJ/y
+    - name: C1GOHTF03
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Hydro"
+  technology:
+    - name: C1HYDMP00
+      unit: EJ/y
+    - name: C1HYMIP00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Nuclear"
+  technology:
+    - name: C1NU00I00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Ocean"
+  technology:
+    - name: C1OCCVP00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Oil"
+  technology:
+    - name: C1OI00I00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Solar"
+  technology:
+    - name: C1SOC1P00
+      unit: EJ/y
+    - name: C1SOV1P00
+      unit: EJ/y
+    - name: C1SOV2P00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+- iamc_variable: "Primary Energy|Wind"
+  technology:
+    - name: C1WDONP00
+      unit: EJ/y
+    - name: C1WDOFP00
+      unit: EJ/y
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+
+
+# Capacity|Electricity
+- iamc_variable: "Capacity|Electricity|Coal, w/o CCS"
+  technology:
+    - name: C1COCHP00
+      unit: TW/y
+    - name: C1COIGP00
+      unit: TW/y
+    - name: C1COSCP00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Coal, w/ CCS"
+  technology:
+    - name: C1COSCPCS
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Solar|PV"
+  technology:
+    - name: C1SOV1P00
+      unit: TW/y
+    - name: C1SOV2P00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Solar|CSP"
+  technology:
+    - name: C1SOC1P00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind"
+  technology:
+    - name: C1WDONP00
+      unit: TW/y
+    - name: C1WDOFP00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind|Offshore"
+  technology:
+    - name: C1WDOFP00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+- iamc_variable: "Capacity|Electricity|Wind|Onshore"
+  technology:
+    - name: C1WDONP00
+      unit: TW/y
+  osemosys_param: Total_results/TotalCapacityAnnual
+
+
+# Secondary Energy
+- iamc_variable: "Secondary Energy|Electricity|Coal, w/o CCS"
+  technology:
+    - name: C1COCHP00
+      unit: EJ/y
+    - name: C1COIGP00
+      unit: EJ/y
+    - name: C1COSCP00
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Electricity|Coal, w/ CCS"
+  technology:
+    - name: C1COSCPCS
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Liquids|Coal"
+  technology:
+    - name: C1COLP000
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Gases|Coal"
+  technology:
+    - name: C1COSF000
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+- iamc_variable: "Secondary Energy|Solids|Coal"
+  technology:
+    - name: C1COHTF03
+      unit: EJ/y
+  osemosys_param: Total_results/UseByTechnology
+
+
+# Final Energy
+- iamc_variable: "Final Energy|Solids|Coal"
+  technology:
+    - name: C1COBRFH1
+      unit: EJ/y
+    - name: ALUPLANT
+      unit: EJ/y
+    - name: CEMPLANT
+      unit: EJ/y
+    - name: FERTPLANT
+      unit: EJ/y
+    - name: PAPPLANT
+      unit: EJ/y
+    - name: PETAPLANT
+      unit: EJ/y
+    - name: PETBPLANT
+      unit: EJ/y
+    - name: STEPLANT
+      unit: EJ/y
+    - name: LA1_i_PROD
+      unit: EJ/y
+    - name: LA1_PROD
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Total_results/UseByTechnology 
+- iamc_variable: "Final Energy|Industry|Solids|Coal"
+  technology:
+    - name: ALUPLANT
+      unit: EJ/y
+    - name: CEMPLANT
+      unit: EJ/y
+    - name: FERTPLANT
+      unit: EJ/y
+    - name: PAPPLANT
+      unit: EJ/y
+    - name: PETAPLANT
+      unit: EJ/y
+    - name: PETBPLANT
+      unit: EJ/y
+    - name: STEPLANT
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Total_results/UseByTechnology  
+- iamc_variable: "Final Energy|Residential and Commercial|Solids|Coal"
+  technology:
+    - name: C1COBRFH1
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Total_results/ProductionByTechnologyAnnual  
+- iamc_variable: "Final Energy|Other Sector|Solids|Coal"
+  technology:
+    - name: LA1_i_PROD
+      unit: EJ/y
+    - name: LA1_PROD
+      unit: EJ/y
+#To be filtered by fuel C1_P_HCO
+  osemosys_param: Total_results/ProductionByTechnologyAnnual
+
+
+# Emissions
+# Not available in GLUCOSE:
+#   Emissions|CO2|Energy|Demand 
+#     Emissions|CO2|Energy|Demand|Industry 
+#     Emissions|CO2|Energy|Demand|Residential and Commercial 
+#     Emissions|CO2|Energy|Demand|Transportation 
+#     Emissions|CO2|Energy|Demand|Agriculture 
+#     Emissions|CO2|Energy|Demand|Other Sector 
+- iamc_variable: "Emissions|CO2|Energy and Industrial Processes"
+  technology:
+    - name: ALUPLANT
+      unit: GtCO2eq/y
+    - name: CEMPLANT
+      unit: GtCO2eq/y
+    - name: FERTPLANT
+      unit: GtCO2eq/y
+    - name: PAPPLANT
+      unit: GtCO2eq/y
+    - name: PETAPLANT
+      unit: GtCO2eq/y
+    - name: PETBPLANT
+      unit: GtCO2eq/y
+    - name: STEPLANT
+      unit: GtCO2eq/y
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1CO00I00
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NG00I00
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+    - name: C1OI00I00
+      unit: GtCO2eq/y
+    - name: C1BMLP000
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|Energy|Supply"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1CO00I00
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NG00I00
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+    - name: C1OI00I00
+      unit: GtCO2eq/y
+    - name: C1BMLP000
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+# - iamc_variable: "Emissions|CO2|Energy|Supply|Electricity"
+#   technology:
+#     - name:
+#       unit: GtCO2eq/y
+#     - name:
+#       unit: GtCO2eq/y
+#   osemosys_param: Total_results/AnnualTechnologyEmission
+# - iamc_variable: "Emissions|CO2|Energy|Supply|Other Sector"
+#   technology:
+#     - name:
+#       unit: GtCO2eq/y
+#     - name:
+#       unit: GtCO2eq/y
+#   osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|Industrial Processes"
+  technology:
+    - name: ALUPLANT
+      unit: GtCO2eq/y
+    - name: CEMPLANT
+      unit: GtCO2eq/y
+    - name: FERTPLANT
+      unit: GtCO2eq/y
+    - name: PAPPLANT
+      unit: GtCO2eq/y
+    - name: PETAPLANT
+      unit: GtCO2eq/y
+    - name: PETBPLANT
+      unit: GtCO2eq/y
+    - name: STEPLANT
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Emissions|CO2|AFOLU"
+  technology:
+    - name: LA1_i_PROD
+      unit: GtCO2eq/y
+    - name: LA1_PROD
+      unit: GtCO2eq/y
+    - name: LA2_PROD
+      unit: GtCO2eq/y
+    - name: LF1
+      unit: GtCO2eq/y
+    - name: LF2_PROD
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+
+# Carbon Sequestration
+- iamc_variable: "Carbon Sequestration|CCS"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|CCS|Biomass"
+  technology:
+    - name: C1BMIGPCS
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|CCS|Fossil"
+  technology:
+    - name: C1COSCPCS
+      unit: GtCO2eq/y
+    - name: C1NGCCPCS
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
+- iamc_variable: "Carbon Sequestration|Direct Air Capture"
+  technology:
+    - name: LF1
+      unit: GtCO2eq/y
+  osemosys_param: Total_results/AnnualTechnologyEmission
