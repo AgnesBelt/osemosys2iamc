@@ -1,5 +1,5 @@
 model: GLUCOSE
-scenario: Baseline
+scenario: Baseline 
 results:
 
 # new with fuel filtering
@@ -147,56 +147,114 @@ results:
 - iamc_variable: "Emissions|CO2|Energy and Industrial Processes"
   technology: [ALUPLANT, CEMPLANT, FERTPLANT, PAPPLANT, PETAPLANT, PETBPLANT, STEPLANT, C1BMIGPCS, C1CO00I00, C1COSCPCS, C1NG00I00, C1NGCCPCS, C1OI00I00, C1BMLP000]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Emissions|CO2|Energy|Supply"
   technology: [C1BMIGPCS, C1CO00I00, C1COSCPCS, C1NG00I00, C1NGCCPCS, C1OI00I00, C1BMLP000]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 # - iamc_variable: "Emissions|CO2|Energy|Supply|Electricity"
 #   technology:
 #     - name:
-#       unit: GtCO2eq/y
+#       unit: Gt CO2e/yr/y
 #     - name:
-#       unit: GtCO2eq/y
+#       unit: Gt CO2e/yr/y
 #   osemosys_param: Baseline_results/AnnualTechnologyEmission
 # - iamc_variable: "Emissions|CO2|Energy|Supply|Other Sector"
 #   technology:
 #     - name:
-#       unit: GtCO2eq/y
+#       unit: Gt CO2e/yr/y
 #     - name:
-#       unit: GtCO2eq/y
+#       unit: Gt CO2e/yr/y
 #   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Emissions|CO2|Industrial Processes"
   technology: [ALUPLANT, CEMPLANT, FERTPLANT, PAPPLANT, PETAPLANT, PETBPLANT, STEPLANT]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Emissions|CO2|AFOLU"
   technology: [LA1_i_PROD, LA1_PROD, LA2_PROD, LF1, LF2_PROD]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 
 # Carbon Sequestration
 - iamc_variable: "Carbon Sequestration|CCS"
   technology: [C1BMIGPCS, C1COSCPCS, C1NGCCPCS]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Carbon Sequestration|CCS|Biomass"
   technology: [C1BMIGPCS]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Carbon Sequestration|CCS|Fossil"
   technology: [C1COSCPCS, C1NGCCPCS]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
 - iamc_variable: "Carbon Sequestration|Direct Air Capture"
   technology: [LF1]
   emission: [CO2EQ]
-  unit: GtCO2eq
+  unit: Gt CO2e/yr
   osemosys_param: Baseline_results/AnnualTechnologyEmission
+
+# Transport
+# Road
+- iamc_variable: "Final Energy|Transportation|Fossils|Road"
+  technology: [C1LFRDF00, C1BFRDF00]
+  fuel: [C1_P_LFO]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Final Energy|Transportation|Electricity|Road"
+  technology: [C1ELRDF00]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Final Energy|Transportation|Liquids|Biomass|Road"
+  technology: [C1BFRDF00]
+  fuel: [C1_S_BIOL]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/UseByTechnology
+# Rail
+- iamc_variable: "Final Energy|Transportation|Fossils|Rail"
+  technology: [C1LFRLF00]
+  fuel: [C1_P_LFO]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/UseByTechnology
+- iamc_variable: "Final Energy|Transportation|Electricity|Rail"
+  technology: [C1ELRLF00]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/UseByTechnology
+
+# Land Cover
+- iamc_variable: "Land Cover|Cropland"
+  technology: [LA1_PROD, LA1_i_PROD]
+  unit: million ha
+  osemosys_param: Baseline_results/TotalTechnologyAnnualActivity
+- iamc_variable: "Land Cover|Cropland|Irrigated"
+  technology: [LA1_i_PROD]
+  unit: million ha
+  osemosys_param: Baseline_results/TotalTechnologyAnnualActivity
+- iamc_variable: "Land Cover|Forest"
+  technology: [LF]
+  unit: million ha
+  osemosys_param: Baseline_results/TotalTechnologyAnnualActivity
+- iamc_variable: "Land Cover|Natural Forest"
+  technology: [LF1]
+  unit: million ha
+  osemosys_param: Baseline_results/TotalTechnologyAnnualActivity
+- iamc_variable: "Land Cover|Pasture"
+  technology: [LA2_PROD]
+  unit: million ha
+  osemosys_param: Baseline_results/TotalTechnologyAnnualActivity
+
+# # Materials Final Energy Use
+# - iamc_variable: "Final Energy|Industry"
+#   technology: [ALUPLANT, CEMPLANT, FERTPLANT, PAPPLANT, PETAPLANT, PETBPLANT, STEPLANT]
+#   fuel: [C1_P_HCO, C1_F_CLS, C1_F_HEA_I, C1_P_LFO, C1_P_GAS]
+#   unit: EJ/yr
+#   osemosys_param: Baseline_results/UseByTechnology  
