@@ -86,6 +86,11 @@ results:
   osemosys_param: Baseline_results/TotalCapacityAnnual
 
 # Secondary Energy
+- iamc_variable: "Secondary Energy|Electricity"
+  technology: [C1BMCHP00, C1BMIGPCS, C1BMSCP00, C1COCHP00, C1COIGP00, C1COSCP00, C1COSCPCS, C1GOCVP00, C1HFGCP00, C1HFGCPCH, C1HYDMP00, C1HYMIP00, C1LFCCP00, C1NGCCP00, C1NGCCPCH, C1NGCCPCS, C1NGGCP00, C1NGGCPCH, C1NULWP00, C1OCCVP00, C1SOC1P00, C1SOV1P00, C1SOV2P00, C1WDOFP00, C1WDONP00]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/ProductionByTechnology
 - iamc_variable: "Secondary Energy|Electricity|Coal, w/o CCS"
   technology: [C1COCHP00, C1COIGP00, C1COSCP00]
   fuel: [C1_S_ELC]
@@ -93,6 +98,21 @@ results:
   osemosys_param: Baseline_results/ProductionByTechnology
 - iamc_variable: "Secondary Energy|Electricity|Coal, w/ CCS"
   technology: [C1COSCPCS]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/ProductionByTechnology
+- iamc_variable: "Secondary Energy|Electricity|Solar"
+  technology: [C1SOC1P00, C1SOV1P00, C1SOV2P00]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/ProductionByTechnology
+- iamc_variable: "Secondary Energy|Electricity|Wind"
+  technology: [C1WDOFP00, C1WDONP00]
+  fuel: [C1_S_ELC]
+  unit: EJ/yr
+  osemosys_param: Baseline_results/ProductionByTechnology
+- iamc_variable: "Secondary Energy|Electricity|Non-Biomass Renewables"
+  technology: [C1HYDMP00, C1HYMIP00, C1GOCVP00, C1OCCVP00, C1SOC1P00, C1SOV1P00, C1SOV2P00, C1WDOFP00, C1WDONP00]
   fuel: [C1_S_ELC]
   unit: EJ/yr
   osemosys_param: Baseline_results/ProductionByTechnology
